@@ -1,0 +1,32 @@
+{
+  "name": "world-management-engine",
+  "version": "0.0.0",
+  "description": "The WME is a framework for designing roleplaying worlds.",
+  "keywords": [
+    "world",
+    "wme",
+    "framework",
+    "engine",
+    "roleplay",
+    "ai"
+  ],
+  "homepage": "https://github.com/NZ-Linix/world-management-engine#readme",
+  "bugs": {
+    "url": "https://github.com/NZ-Linix/world-management-engine/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NZ-Linix/world-management-engine.git"
+  },
+  "license": "MIT",
+  "author": "NZ-Linix",
+  "type": "commonjs",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3"
+  }
+}
