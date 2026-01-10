@@ -1,25 +1,27 @@
 import chalk from "chalk";
+const doLogging: boolean = !(process.env.WME_DISABLE_LOG === "true");
+
+const infoTag = chalk.gray("[") + chalk.blue("INFO") + chalk.gray("]") + chalk.reset(" ");
+const warnTag = chalk.gray("[") + chalk.yellow("WARN") + chalk.gray("]") + chalk.reset(" ");
+const errorTag = chalk.gray("[") + chalk.red("FAIL") + chalk.gray("]") + chalk.reset(" ");
+const successTag = chalk.gray("[") + chalk.green(" OK ") + chalk.gray("]") + chalk.reset(" ");
 
 export class wme_log {
 
     static info(message: string) {
-        const infoTag = chalk.gray("[") + chalk.blue("INFO") + chalk.gray("]") + chalk.reset(" ");
-        console.log(infoTag + message);
+        if ( doLogging ) { console.info(infoTag + message); }
     }
 
     static warn(message: string) {
-        const warnTag = chalk.gray("[") + chalk.yellow("WARN") + chalk.gray("]") + chalk.reset(" ");
-        console.log(warnTag + message);
+        if ( doLogging ) { console.warn(warnTag + message); }
     }
 
     static error(message: string) {
-        const errorTag = chalk.gray("[") + chalk.red("FAIL") + chalk.gray("]") + chalk.reset(" ");
-        console.log(errorTag + message);
+        if ( doLogging ) { console.error(errorTag + message); }
     }
 
     static success(message: string) {
-        const successTag = chalk.gray("[") + chalk.green(" OK ") + chalk.gray("]") + chalk.reset(" ");
-        console.log(successTag + message);
+        if ( doLogging ) { console.log(successTag + message); }
     }
     
 }

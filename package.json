@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/chalk": "^0.4.31",
     "@types/node": "^25.0.3",
+    "dotenv": "^17.2.3",
     "typescript": "^5.9.3"
   },
   "dependencies": {
