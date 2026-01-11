@@ -4,12 +4,11 @@ import OpenAI from 'openai';
 
 import { EventEmitter } from 'events';
 
-export class Engine extends EventEmitter {
+export class Engine {
     private isReadyVariable = false;
     private eventEmitter = new EventEmitter();
 
-    constructor(private apiKey: string, private baseURL: string, private name: string) {
-        super();
+    constructor(protected apiKey: string, protected baseURL: string, protected name: string) {
         this.init(apiKey, baseURL, name);
     }
 
