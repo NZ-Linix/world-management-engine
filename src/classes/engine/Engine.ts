@@ -7,8 +7,14 @@ import { EventEmitter } from 'events';
 export class Engine {
     private isReadyVariable = false;
     private eventEmitter = new EventEmitter();
+    public apiKey: string;
+    public baseURL: string;
+    public name: string;
 
-    private constructor(protected apiKey: string, protected baseURL: string, protected name: string) {
+    constructor(apiKey: string, baseURL: string, name: string) {
+        this.apiKey = apiKey;
+        this.baseURL = baseURL;
+        this.name = name;
         this.init(apiKey, baseURL, name);
     }
 
