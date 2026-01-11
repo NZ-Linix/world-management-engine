@@ -8,7 +8,7 @@ export class Engine {
     private isReadyVariable = false;
     private eventEmitter = new EventEmitter();
 
-    constructor(protected apiKey: string, protected baseURL: string, protected name: string) {
+    private constructor(protected apiKey: string, protected baseURL: string, protected name: string) {
         this.init(apiKey, baseURL, name);
     }
 
